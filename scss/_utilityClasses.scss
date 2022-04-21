@@ -1,0 +1,10 @@
+.box {
+  max-width: 1140px;
+  margin: 0 auto;
+  @include media(full-desktop) {
+    margin: 0 30px;
+  }
+  @include media(sm) {
+    margin: 0 15px;
+  }
+}

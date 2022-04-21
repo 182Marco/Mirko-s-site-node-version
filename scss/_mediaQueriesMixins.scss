@@ -1,0 +1,92 @@
+@mixin media($breakpoint: tablet) {
+  @if $breakpoint == xs-phone {
+    @media screen and (max-width: 330px) {
+      @content;
+    }
+  } @else if $breakpoint == s-phone {
+    @media screen and (max-width: 340px) {
+      @content;
+    }
+  } @else if $breakpoint == phone {
+    @media screen and (max-width: 360px) {
+      @content;
+    }
+  } @else if $breakpoint == xs-tablet {
+    @media screen and (max-width: 430px) {
+      @content;
+    }
+  } @else if $breakpoint == fix {
+    @media screen and (max-width: 450px) {
+      @content;
+    }
+  } @else if $breakpoint == s-tablet {
+    @media screen and (max-width: 500px) {
+      @content;
+    }
+  } @else if $breakpoint == sm {
+    @media screen and (max-width: 576px) {
+      @content;
+    }
+  } @else if $breakpoint == l-tablet {
+    @media screen and (max-width: 650px) {
+      @content;
+    }
+  } @else if $breakpoint == xl-tablet {
+    @media screen and (max-width: 700px) {
+      @content;
+    }
+  } @else if $breakpoint == xs-desktop {
+    @media screen and (max-width: 805px) {
+      @content;
+    }
+  } @else if $breakpoint == s-desktop {
+    @media screen and (max-width: 900px) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media screen and (max-width: 992px) {
+      @content;
+    }
+  } @else if $breakpoint == full-desktop {
+    @media screen and (max-width: 1170px) {
+      @content;
+    }
+  }
+}
+
+//mobile first
+@mixin media-mob-first($breakpoint: $tablet) {
+  @if $breakpoint == phone {
+    @media screen and (min-width: 380px) {
+      @content;
+    }
+  } @else if $breakpoint == s-phone {
+    @media screen and (min-width: 400px) {
+      @content;
+    }
+  } @else if $breakpoint == l-phone {
+    @media screen and (min-width: 425px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media screen and (min-width: 450px) {
+      @content;
+    }
+  } @else if $breakpoint == l-tablet {
+    @media screen and (min-width: 500px) {
+      @content;
+    }
+  } @else if $breakpoint == xl-tablet {
+    @media screen and (min-width: 600px) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media screen and (min-width: 700px) {
+      @content;
+    }
+  } @else if $breakpoint == full-desktop {
+    @media screen and (min-width: 1150px) {
+      @content;
+    }
+  }
+}
